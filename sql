@@ -1,29 +1,29 @@
 -- exercise 1
-create database consultation and theraphy;
+create database consultationandtheraphy;
 create table  doctor(id int primary key,name varchar(30),specialization varchar(20) not null,gender varchar(10) not null);
 select * from doctor;
-create table appointments(appointment id int primary key not null,appointment time time not null,user id int,doctor id int not null,date date,reason varchar(50));
+create table appointments(appointmentid int primary key not null,appointmenttime time not null,userid int,doctorid int not null,date date,reason varchar(50));
 select * from appointments;
-create table patient(name varchar(50),id int primary key,village varchar(40),disease varchar(50),date of consultation date);
+create table patient(name varchar(50),id int primary key,village varchar(40),disease varchar(50),dateofconsultation date);
 select *from patient;
 create table reviews(doctor_id int primary key,doctor_name varchar(30) not null,interaction_with_doctor varchar(20),rating int);
 select * from reviews;
---exercise 2
+-- exercise2
 create database question2;
 create table contact(id int primary key,email varchar(60),fname varchar(30),lname varchar(40),company varchar(30),active_flag int,opt_out int);
-INSERT INTO contact VALUES(123,"a@a.com","kian","seth","ABC",1,1)
-INSERT INTO contact VALUES(133,"b@a.com","neha","seth","ABC",1,1)
-INSERT INTO contact VALUES(234,"c@a.com","puru","malik","CDF",0,0)
-INSERT INTO contact VALUES(342,"d@a.com","kian","seth","TEG",1,0)
+INSERT INTO contact VALUES(123,"a@a.com","kian","seth","ABC",1,1);
+insert INTO contact VALUES(133,"b@a.com","neha","seth","ABC",1,1);
+INSERT INTO contact VALUES(234,"c@a.com","puru","malik","CDF",0,0);
+INSERT INTO contact VALUES(342,"d@a.com","kian","seth","TEG",1,0);
 select * from contact;
 select * from contact where active_flag =1;-- to select where active_ flag is 1
 delete from contact where opt_out=1;-- to deactivate who are opt_out
 delete from contact where company="ABC";-- to delete column with company ABC
-insert into contact values(658,"mili@gmail.com","mili","","DGH",1,1)
+insert into contact values(658,"mili@gmail.com","mili","","DGH",1,1);
 select distinct company from contact;
 update contact set fname="niti" where fname="mili";
---exercise3
-create database question3
+-- exercise3
+create database question3;
 create table customer (cus_id int,c_name varchar(30),city varchar(30),grade int,salesman_id int);
 insert into customer values(3002, 'nick rimando','new york',100,5001),
 (3007,'brad davis','new york',200,5001),(3005,'graham zusi','california',200,5002),
